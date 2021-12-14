@@ -27,6 +27,7 @@ def generate_gcode(dots):
         [
             f"""
                 G0 F{travel_speed} X{x} Y{y}
+                G0 F{retraction_speed} Z0
                 G1 F{penetration_speed} Z{-z}
                 G1 F{retraction_speed} Z{travel_height}
             """
